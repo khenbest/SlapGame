@@ -38,24 +38,24 @@ let hits = 0;
 
 
 function slap() {
-    health -= 1;
-    console.log();
+    Defenders.Batman.dHealth -= 1;
+    console.log(Defenders.Batman.dHealth);
     update();
 }
 function punch() {
-    health -= 5;
-    console.log(health);
+    Defenders.Batman.dHealth -= 5;
+    console.log(Defenders.Batman.dHealth);
     update();
 }
 function kick() {
-    health -= 10;
-    console.log(health);
+    Defenders.Batman.dHealth -= 10;
+    console.log(Defenders.Batman.dHealth);
     update();
 }
 
 
 function update() {
-    document.getElementById('health').innerText = Defenders.Batman.dHealth
+    document.getElementById('health').innerText = Defenders.Batman.dHealth;
     document.getElementById('target').innerText = Defenders.Batman.name;
 }
 
