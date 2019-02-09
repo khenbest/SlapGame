@@ -46,13 +46,8 @@ let Defenders = {
 var items = {
     dust: { name: 'Dust', modifier: 2, description: 'MY EYES!' },
     batarang: { name: 'Batarang', modifier: 20, description: 'WHAT WAS THAT?!' },
-    hpot: { name: 'Health Potion', modifier: -20, description: 'It heals!' }
+    hpot: { name: 'Health Potion', modifier: -20, description: 'NOM NOM NOM', }
 }
-
-let health = Defenders.Batman.dHealth;
-let name = Defenders.Batman.name;
-let hits = 0;
-
 
 function slap() {
     Defenders.Batman.dHealth -= 1 + addMods();
@@ -75,6 +70,7 @@ function kick() {
 
 function giveItem(itemName) {
     Defenders.Batman.items.push(items[itemName]);
+    alert(items[itemName].description)
 }
 
 
@@ -88,11 +84,23 @@ function addMods() {
     Defenders.Batman.items = []
     return modifierTotal;
 }
+function reset() {
+    Defenders.Batman.dHealth = 220;
+    Defenders.Batman.hits = 0;
+    update();
+}
+
+
 
 function update() {
     document.getElementById('health').innerText = Defenders.Batman.dHealth;
     document.getElementById('hits').innerText = Defenders.Batman.hits;
+    document.getElementById('target').innerText = Defenders.Batman.name;
+    if (Defenders.Batman.dHealth <= 0) {
+        alert('FATALITY')
+        reset();
 
+    }
 }
 
 update();

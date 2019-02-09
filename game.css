@@ -1,1 +1,9 @@
-/*Only use this file if you want to override bootstrap or create your own style*/
+body{
+    background: #000;
+    color:yellow;
+}
+.target-img{
+display: flex;
+align-content: center;
+margin: auto;
+}
