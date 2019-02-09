@@ -1,0 +1,39 @@
+<html>
+
+<head>
+	<title>Slap Object Game</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+		integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+	<link rel="stylesheet" href="game.css">
+
+</head>
+
+<body>
+	<div>
+		<img class="target-img"
+			src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnkfOvh_jWXLatzV9CDAH3fv6ishmlAJacoAK2IiyyS8RaYp8Jsg">
+	</div>
+	<div id="defender-bar" class="row d-flex container-fluid justify-content-center space-around space-between">
+		<span>Defender: <span id="target"></span></span>
+		<span>Health: <span id="health"></span></span>
+		<span>Hits: <span id="hits"></span></span>
+		<button onclick="slap()">Slap</button>
+		<button onclick="punch()">Punch</button>
+		<button onclick="kick()">Kick</button>
+	</div>
+
+	<div id="item-bar" class="row d-flex container-fluid justify-content-center space-around space-between">
+		<span>Items: <span id="target"></span></span>
+		<button onclick="giveItem('hpot')">Give Health Potion</button>
+		<button onclick="giveItem('batarang')">Throw Batarang</button>
+		<button onclick="giveItem('dust')">Throw Dust</button>
+		<button onclick="reset()">Reset</button>
+	</div>
+
+
+
+
+	<script src="game.js"></script>
+</body>
+
+</html>

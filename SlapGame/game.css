@@ -1,0 +1,9 @@
+body{
+    background: #000;
+    color:yellow;
+}
+.target-img{
+display: flex;
+align-content: center;
+margin: auto;
+}
