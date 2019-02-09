@@ -43,35 +43,56 @@ let Defenders = {
     }
 }
 
+var items = {
+    dust: { name: 'Dust', modifier: 2, description: 'MY EYES!' },
+    batarang: { name: 'Batarang', modifier: 20, description: 'WHAT WAS THAT?!' },
+    hpot: { name: 'Health Potion', modifier: -20, description: 'It heals!' }
+}
+
 let health = Defenders.Batman.dHealth;
 let name = Defenders.Batman.name;
 let hits = 0;
 
 
 function slap() {
-    Defenders.Batman.dHealth -= 1;
+    Defenders.Batman.dHealth -= 1 + addMods();
     Defenders.Batman.hits += 1;
     console.log(Defenders.Batman.dHealth);
     update();
 }
 function punch() {
-    Defenders.Batman.dHealth -= 5;
+    Defenders.Batman.dHealth -= 5 + addMods();
     console.log(Defenders.Batman.dHealth);
     Defenders.Batman.hits += 1;
     update();
 }
 function kick() {
-    Defenders.Batman.dHealth -= 10;
+    Defenders.Batman.dHealth -= 10 + addMods();
     console.log(Defenders.Batman.dHealth);
     Defenders.Batman.hits += 1;
     update();
 }
 
+function giveItem(itemName) {
+    Defenders.Batman.items.push(items[itemName]);
+}
+
+
+function addMods() {
+    let modifierTotal = 0;
+    for (let index = 0; index < Defenders.Batman.items.length; index++) {
+        let item = Defenders.Batman.items[index];
+        modifierTotal += item.modifier
+        console.log(modifierTotal);
+    }
+    Defenders.Batman.items = []
+    return modifierTotal;
+}
 
 function update() {
     document.getElementById('health').innerText = Defenders.Batman.dHealth;
-    document.getElementById('target').innerText = Defenders.Batman.name;
     document.getElementById('hits').innerText = Defenders.Batman.hits;
+
 }
 
-update()
+update();

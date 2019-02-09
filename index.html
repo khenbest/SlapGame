@@ -10,7 +10,6 @@
 	<div class="row d-flex container-fluid">
 		<div class="col-6 d-flex container-fluid justify-content-center">
 			<span>Defender: <span id="target"></span></span>
-			<span>Items: <button onclick="giveItem()">Use Batarang</button><span id="items"></span></span>
 			<span>Health: <span id="health"></span></span>
 			<span>Hits: <span id="hits"></span></span>
 			<button onclick="slap()">Slap</button>
@@ -21,14 +20,12 @@
 
 		</div>
 	</div>
-	<div class="col-6 d-flex container-fluid justify-content-center">
-		<span>Defender: <span id="target"></span></span>
-		<span>Health: <span id="health"></span>
-		</span>
+	<div class="row d-flex container-fluid justify-content-center">
+		<span>Items: <span id="target"></span></span>
 
-		<button onclick="slap()">Slap</button>
-		<button onclick="punch()">Punch</button>
-		<button onclick="kick()">Kick</button>
+		<button onclick="giveItem('hpot')">Give Health Potion</button>
+		<button onclick="giveItem('batarang')">Throw Batarang</button>
+		<button onclick="giveItem('dust')">Throw Dust</button>
 
 	</div>
 
