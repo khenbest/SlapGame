@@ -77,4 +77,3 @@ Students will use javascript in order to interact with the DOM to create a dynam
       - 3 Buttons to affect status in varying amounts
 
 
-"# slapgame1" 
